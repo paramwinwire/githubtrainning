@@ -1,0 +1,17 @@
+D:\Githubtrainning\githubtrainning\bin\Debug\net7.0\githubtrainning.exe
+D:\Githubtrainning\githubtrainning\bin\Debug\net7.0\githubtrainning.deps.json
+D:\Githubtrainning\githubtrainning\bin\Debug\net7.0\githubtrainning.runtimeconfig.json
+D:\Githubtrainning\githubtrainning\bin\Debug\net7.0\githubtrainning.dll
+D:\Githubtrainning\githubtrainning\bin\Debug\net7.0\githubtrainning.pdb
+D:\Githubtrainning\githubtrainning\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\githubtrainning.csproj.AssemblyReference.cache
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\githubtrainning.GeneratedMSBuildEditorConfig.editorconfig
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\githubtrainning.AssemblyInfoInputs.cache
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\githubtrainning.AssemblyInfo.cs
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\githubtrainning.csproj.CoreCompileInputs.cache
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\githubtrainning.csproj.CopyComplete
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\githubtrainning.dll
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\refint\githubtrainning.dll
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\githubtrainning.pdb
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\githubtrainning.genruntimeconfig.cache
+D:\Githubtrainning\githubtrainning\obj\Debug\net7.0\ref\githubtrainning.dll
