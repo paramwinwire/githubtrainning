@@ -1,0 +1,38 @@
+name: Build and Save Artifacts
+ 
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-organize:
+    runs-on:  [self-hosted, runner2]
+ 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+ 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with: 
+          dotnet-version: 7.x
+ 
+      - name: Build
+        run: |
+          cd D:\Githubtrainning\githubtrainning
+          dotnet build --configuration Release
+          dotnet publish -c Release -o out
+      - name: Copy Artifacts
+        run: |
+          # Copy the artifacts to a designated directory
+
+          #mkdir -p $HOME/artifacts
+          if (-Not (Test-Path $HOME/artifacts)) {
+              New-Item -ItemType Directory -Path $HOME/artifacts
+          }
+          cp -r C:\actions-runner\_work\githubtrainning\githubtrainning\out\* $HOME\artifacts\
+
+    environment:
+      name: test-environment
+
+
