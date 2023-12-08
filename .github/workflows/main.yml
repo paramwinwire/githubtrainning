@@ -1,24 +1,33 @@
-name: Build on Push
+name: Build and Save Artifacts
+ 
 on:
   push:
     branches:
       - main
- 
 jobs:
-  build:
+  build-and-organize:
     runs-on: self-hosted
  
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
  
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with: 
-            dotnet-version: 7.x
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with: 
+          dotnet-version: 7.x
  
-    - name: Build and Publish
-      run: |
+      - name: Build
+        run: |
           cd D:\Githubtrainning\githubtrainning
           dotnet build --configuration Release
           dotnet publish -c Release -o out
+      - name: Copy Artifacts
+        run: |
+          # Copy the artifacts to a designated directory
+          mkdir -p $HOME/artifacts
+          cp -r C:\actions-runner\_work\D:\Githubtrainning\githubtrainning\* $HOME\artifacts\
+    environment:
+      name: test-environment
+
+
