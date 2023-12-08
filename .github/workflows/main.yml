@@ -31,12 +31,7 @@ jobs:
               New-Item -ItemType Directory -Path $HOME/artifacts
           }
           cp -r C:\actions-runner\_work\githubtrainning\githubtrainning\out\* $HOME\artifacts\
-          #Remove the existing artifacts directory if it exists
-          #Remove-Item -Path $HOME\artifacts -Recurse -Force -ErrorAction SilentlyContinue
-          ## Create a new artifacts directory
-          #New-Item -ItemType Directory -Path $HOME\artifacts
-          ## Copy the artifacts to the new directory
-          #Copy-Item -Path D:\Githubtrainning\githubtrainning\out\* -Destination $HOME\artifacts\ -Recursehas context menu
+
     environment:
       name: test-environment
 
