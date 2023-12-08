@@ -22,15 +22,14 @@ jobs:
           cd D:\Githubtrainning\githubtrainning
           dotnet build --configuration Release
           dotnet publish -c Release -o out
-      - name: Copy Artifacts
+      - name: Organize Artifacts
         run: |
-          # Copy the artifacts to a designated directory
-
-          #mkdir -p $HOME/artifacts
-          if (-Not (Test-Path $HOME/artifacts)) {
-              New-Item -ItemType Directory -Path $HOME/artifacts
-          }
-          cp -r C:\actions-runner\_work\githubtrainning\githubtrainning\out\* $HOME\artifacts\
+          # Remove the existing artifacts directory if it exists
+          Remove-Item -Path $HOME\artifacts -Recurse -Force -ErrorAction SilentlyContinue
+          # Create a new artifacts directory
+          New-Item -ItemType Directory -Path $HOME\artifacts
+          # Copy the artifacts to the new directory
+          Copy-Item -Path githubtrainning\githubtrainning\out\* -Destination $HOME\artifacts\ -Recurse
 
     environment:
       name: test-environment
