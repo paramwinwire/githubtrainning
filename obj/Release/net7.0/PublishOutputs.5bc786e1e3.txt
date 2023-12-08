@@ -1,0 +1,6 @@
+D:\Githubtrainning\githubtrainning\out\githubtrainning.exe
+D:\Githubtrainning\githubtrainning\out\githubtrainning.dll
+D:\Githubtrainning\githubtrainning\out\githubtrainning.deps.json
+D:\Githubtrainning\githubtrainning\out\githubtrainning.runtimeconfig.json
+D:\Githubtrainning\githubtrainning\out\githubtrainning.pdb
+D:\Githubtrainning\githubtrainning\out\Newtonsoft.Json.dll
