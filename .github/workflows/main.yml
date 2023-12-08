@@ -26,7 +26,7 @@ jobs:
         run: |
           # Copy the artifacts to a designated directory
           mkdir -p $HOME/artifacts
-          cp -r C:\actions-runner\_work\D:\Githubtrainning\githubtrainning\* $HOME\artifacts\
+          cp -r C:\actions-runner\_work\D:\Githubtrainning\githubtrainning\out\* $HOME\artifacts\
     environment:
       name: test-environment
 
