@@ -1,7 +1,8 @@
 name: Build and Save Artifacts
 
+#Top Level
 env:
-  NAME: 'Test Env Var' 
+  NAME: 'Test Env Var'
 
 on:
   push:
@@ -17,18 +18,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
- 
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v1
-        with: 
+        with:
           dotnet-version: 7.x
- 
+
       - name: Build
         run: |
           cd D:\Githubtrainning\githubtrainning
           dotnet build --configuration Release
           dotnet publish -c Release -o out
-          
+
       - name: Organize Artifacts
         run: |
           # Remove the existing artifacts directory if it exists
@@ -40,12 +41,12 @@ jobs:
 
       - name: Print name
         run: echo "Hello $NAME"
-        
-      - name: Print NEWVAR (Job Level)
+
+      - name: Print NEWVAR
         run: echo "Hello $NEWVAR"
-        
-      - name: Print NEWVAR AGAIN (Job Level)
-        run: echo "Hello ${{ env.NEWVAR }}"
-        
+
+      - name: Print NEWVAR AGAIN
+        run: echo "Hello $NEWVAR"
+
     environment:
       name: test-environment
