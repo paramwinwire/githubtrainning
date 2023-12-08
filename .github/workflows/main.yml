@@ -19,6 +19,6 @@ jobs:
  
     - name: Build and Publish
       run: |
-          cd Githubtrainning
+          cd D:\Githubtrainning\githubtrainning
           dotnet build --configuration Release
           dotnet publish -c Release -o out
