@@ -19,6 +19,6 @@ jobs:
  
     - name: Build and Publish
       run: |
-          cd MyWebApp
+          cd Githubtrainning
           dotnet build --configuration Release
           dotnet publish -c Release -o out
