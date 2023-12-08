@@ -30,7 +30,7 @@ jobs:
           if (-Not (Test-Path $HOME/artifacts)) {
               New-Item -ItemType Directory -Path $HOME/artifacts
           }
-          cp -r C:\actions-runner\_work\D:\Githubtrainning\githubtrainning\out\* $HOME\artifacts\
+          cp -r C:\actions-runner\_work\githubtrainning\githubtrainning\out\* $HOME\artifacts\
           Remove the existing artifacts directory if it exists
           #Remove-Item -Path $HOME\artifacts -Recurse -Force -ErrorAction SilentlyContinue
           ## Create a new artifacts directory
