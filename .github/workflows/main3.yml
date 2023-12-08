@@ -1,0 +1,51 @@
+name: Build and Save Artifacts
+
+env:
+  NAME: 'Test Env Var' 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-organize:
+    runs-on:  [self-hosted, runner2]
+    env:
+      JOB_LEVEL_VAR: 'Another Var'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+ 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with: 
+          dotnet-version: 7.x
+ 
+      - name: Build
+        run: |
+          cd D:\Githubtrainning\githubtrainning
+          dotnet build --configuration Release
+          dotnet publish -c Release -o out
+          
+      - name: Organize Artifacts
+        run: |
+          # Remove the existing artifacts directory if it exists
+          Remove-Item -Path $HOME\artifacts -Recurse -Force -ErrorAction SilentlyContinue
+          # Create a new artifacts directory
+          New-Item -ItemType Directory -Path $HOME\artifacts
+          # Copy the artifacts to the new directory
+          Copy-Item -Path C:\runner2\actions-runner\_work\githubtrainning\githubtrainning\out\* -Destination $HOME\artifacts\ -Recurse
+
+      - name: Print name
+        run: echo "Hello $NAME"
+        
+      - name: Print NEWVAR (Job Level)
+        run: echo "Hello $JOB_LEVEL_VAR"
+        
+      - name: Print NEWVAR AGAIN (Job Level)
+        run: echo "Hello ${{ env.JOB_LEVEL_VAR }}"
+        
+    environment:
+      name: test-environment
