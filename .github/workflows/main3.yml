@@ -12,7 +12,7 @@ jobs:
   build-and-organize:
     runs-on:  [self-hosted, runner2]
     env:
-      JOB_LEVEL_VAR: 'Another Var'
+      NEWVAR: 'Another Var'
 
     steps:
       - name: Checkout repository
@@ -42,10 +42,10 @@ jobs:
         run: echo "Hello $NAME"
         
       - name: Print NEWVAR (Job Level)
-        run: echo "Hello $JOB_LEVEL_VAR"
+        run: echo "Hello $NEWVAR"
         
       - name: Print NEWVAR AGAIN (Job Level)
-        run: echo "Hello ${{ env.JOB_LEVEL_VAR }}"
+        run: echo "Hello ${{ env.NEWVAR }}"
         
     environment:
       name: test-environment
