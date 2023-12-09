@@ -47,7 +47,7 @@ jobs:
       run: echo "Cleaning up..."
  
   final:
-    needs: [build, test, deploy, cleanup]
+    needs: [cleanup,build, test, deploy, cleanup]
     runs-on: ubuntu-latest
  
     steps:
