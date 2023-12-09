@@ -1,4 +1,4 @@
-name: Issue Opened Workflow
+name: Issue Opened  Workflow
  
 on:
   issues:
