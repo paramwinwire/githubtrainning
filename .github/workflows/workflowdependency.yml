@@ -2,7 +2,7 @@ name: Workflow Dependency
  
 on:
   workflow_run:
-    workflows: ["multijob Workflow"]
+    workflows: ["Multi-Job Workflow"]
     types:
       - completed
  
