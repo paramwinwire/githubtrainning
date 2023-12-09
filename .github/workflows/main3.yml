@@ -40,7 +40,7 @@ jobs:
           Copy-Item -Path C:\runner2\actions-runner\_work\githubtrainning\githubtrainning\out\* -Destination $HOME\artifacts\ -Recurse
 
       - name: Print name
-        run: echo "Hello $NAME"
+        run: echo "Hello ${{env.NAME}}"
 
       - name: Print NEWVAR
         run: echo "Hello $NEWVAR"
