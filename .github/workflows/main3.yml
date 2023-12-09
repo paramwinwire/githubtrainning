@@ -46,7 +46,7 @@ jobs:
         run: echo "Hello $NEWVAR"
 
       - name: Print NEWVAR AGAIN
-        run: echo "Hello $NEWVAR"
+        run: echo "Hello ${{env.NEWVAR}}"
 
     environment:
       name: test-environment
