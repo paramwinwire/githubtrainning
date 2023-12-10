@@ -9,5 +9,9 @@ jobs:
     steps:
       - name: Display Repo Info
         run: |
-          echo "Repository Name: ${{ github.repository }}"
-          echo "Repository Owner: ${{ github.repository_owner }}"
+          repo_full_name="${{ github.repository }}"
+          repo_owner="${repo_full_name%/*}"
+          repo_name="${repo_full_name#*/}"
+
+          echo "Repository Name: $repo_name"
+          echo "Repository Owner: $repo_owner"
