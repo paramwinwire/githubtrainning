@@ -1,0 +1,12 @@
+name: Display Repo Name
+
+on: [push]
+
+jobs:
+  display-repo-name:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display Repo Name
+        run: |
+          echo "Repository Name: ${{ github.repository }}"
