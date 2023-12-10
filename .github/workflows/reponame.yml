@@ -1,12 +1,13 @@
-name: Display Repo Name
+name: Display Repo Name and Username
 
 on: [push]
 
 jobs:
-  display-repo-name:
+  display-repo-info:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Display Repo Name
+      - name: Display Repo Info
         run: |
           echo "Repository Name: ${{ github.repository }}"
+          echo "Repository Owner: ${{ github.repository_owner }}"
