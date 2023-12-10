@@ -1,0 +1,13 @@
+name: 'My Reusable Action'
+description: 'Displays repository name and owner'
+
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        repo_full_name="${{ github.repository }}"
+        repo_owner="${repo_full_name%/*}"
+        repo_name="${repo_full_name#*/}"
+
+        echo "Repository Name: $repo_name"
+        echo "Repository Owner: $repo_owner"
