@@ -1,6 +1,9 @@
 name: Display Repo Name and Username
 
-on: [push]
+on:
+  push:
+    branches:
+      - main # Adjust this based on your default branch
 
 jobs:
   display-repo-info:
