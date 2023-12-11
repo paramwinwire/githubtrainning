@@ -15,9 +15,7 @@ jobs:
  
     - name: Build
       run: echo "Building..."
-    - name: Use Reusable Template
-      uses: .github/workflows/reponame.yml
- 
+  
   test:
     runs-on: ubuntu-latest
  
